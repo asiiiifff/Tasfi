@@ -53,10 +53,10 @@ function createHearts() {
                 Math.random() * 100 + "vw";
 
             heart.style.fontSize =
-                12 + Math.random() * 18 + "px";
+                18 + Math.random() * 22 + "px";
 
             heart.style.animationDuration =
-                3 + Math.random() * 2 + "s";
+                6 + Math.random() * 3 + "s";
 
             document.body.appendChild(heart);
 
@@ -65,7 +65,7 @@ function createHearts() {
 
                 heart.remove();
 
-            }, 5000);
+            }, 9000);
 
         }, i * 180);
 
