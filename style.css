@@ -113,7 +113,7 @@ button:hover {
 
     border-color: #c9637d;
 
-    color: white;
+    color: rgb(0, 0, 255);
 
     transform: translateY(-2px);
 }
