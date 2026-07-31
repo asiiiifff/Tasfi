@@ -113,7 +113,7 @@ button:hover {
 
     border-color: #c9637d;
 
-    color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
 
     transform: translateY(-2px);
 }
@@ -141,7 +141,7 @@ button:hover {
 
     color: #69565d;
 
-    font-size: 30px;
+    font-size: 20px;
 
     line-height: 1.75;
 
@@ -258,7 +258,7 @@ button:hover {
     }
 
     .message {
-        font-size: 30px;
+        font-size: 20px;
     }
 
 }
