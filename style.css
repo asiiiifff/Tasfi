@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     min-height: 100vh;
 
@@ -21,7 +22,9 @@ body {
 }
 
 
-/* Main small area */
+/* =========================
+   MAIN CARD
+========================= */
 
 main {
     width: min(460px, 88%);
@@ -30,7 +33,7 @@ main {
 
     padding: 42px 35px;
 
-    background: #fff;
+    background: #ffffff;
 
     border: 1px solid #f0dce2;
 
@@ -38,10 +41,14 @@ main {
 
     box-shadow:
         0 15px 45px rgba(150, 80, 100, 0.08);
+
+    position: relative;
 }
 
 
-/* Heart */
+/* =========================
+   FIRST PAGE
+========================= */
 
 .heart {
     color: #cf7189;
@@ -53,8 +60,6 @@ main {
     animation: breathe 2.5s ease-in-out infinite;
 }
 
-
-/* Small introduction */
 
 .intro {
     color: #a86b7c;
@@ -69,8 +74,6 @@ main {
 }
 
 
-/* Name */
-
 h1 {
     font-family: "Balsamiq Sans", sans-serif;
 
@@ -84,7 +87,9 @@ h1 {
 }
 
 
-/* Button */
+/* =========================
+   BUTTONS
+========================= */
 
 button {
     margin-top: 28px;
@@ -105,21 +110,31 @@ button {
 
     cursor: pointer;
 
-    transition: all 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 
 button:hover {
     background: #c9637d;
 
     border-color: #c9637d;
 
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 
     transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(201, 99, 125, 0.2);
 }
 
 
-/* Divider */
+/* =========================
+   DIVIDER
+========================= */
 
 .line {
     width: 35px;
@@ -132,7 +147,18 @@ button:hover {
 }
 
 
-/* Confession */
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   CONFESSION
+========================= */
 
 .message {
     max-width: 330px;
@@ -150,12 +176,11 @@ button:hover {
     transform: translateY(10px);
 }
 
+
 .message.show {
     animation: reveal 0.8s ease forwards;
 }
 
-
-/* Final sentence */
 
 .final {
     margin-top: 28px;
@@ -167,46 +192,425 @@ button:hover {
     font-weight: 700;
 
     opacity: 0;
+
+    transform: translateY(10px);
 }
 
+
 .final.show {
+    animation: reveal 0.8s ease forwards;
+}
+
+
+/* =================================================
+   SECOND PAGE
+   ROMANTIC DESIGN
+================================================= */
+
+.question-page {
+    min-height: 310px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 18px 10px 10px;
+
+    border-radius: 12px;
+}
+
+
+/* Soft pink glow behind everything */
+
+.question-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+
+    height: 210px;
+
+    border-radius: 50%;
+
+    background: #fff0f4;
+
+    top: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    filter: blur(3px);
+
+    z-index: 0;
+}
+
+
+/* Second soft glow */
+
+.question-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #fde2e9;
+
+    bottom: -35px;
+
+    right: -20px;
+
+    opacity: 0.7;
+
+    z-index: 0;
+}
+
+
+/* Make actual content sit above background */
+
+.question-page > *:not(.decor-heart) {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Large romantic heart */
+
+.romantic-heart {
+    width: 72px;
+
+    height: 72px;
+
+    margin: 5px auto 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    border: 1px solid #f1ccd6;
+
+    color: #cf7189;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 8px 25px rgba(201, 99, 125, 0.13);
+
+    animation:
+        heartFloat 3s ease-in-out infinite;
+}
+
+
+/* Small romantic introduction */
+
+.question-small {
+    color: #b47787;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-top: 5px;
+
+    opacity: 0.9;
+}
+
+
+/* Decorative line */
+
+.question-line {
+    width: 45px;
+
+    height: 1px;
+
+    background: #e6b9c5;
+
+    margin: 15px auto;
+}
+
+
+/* Main question */
+
+.question {
+    color: #493239;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    margin: 0 auto;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    max-width: 280px;
+}
+
+
+.question.show {
+    animation: reveal 0.8s ease forwards;
+}
+
+
+/* Little heart row */
+
+.tiny-hearts {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+.tiny-hearts span {
+    color: #d98da0;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+
+.tiny-hearts span:nth-child(2),
+.tiny-hearts span:nth-child(4) {
+    font-size: 9px;
+
+    opacity: 0.55;
+}
+
+
+.tiny-hearts span:nth-child(3) {
+    color: #c9637d;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   DECORATIVE FLOATING HEARTS
+========================= */
+
+.decor-heart {
+    position: absolute;
+
+    color: #e9b7c3;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0.55;
+}
+
+
+.heart-one {
+    top: 35px;
+
+    left: 35px;
+
+    font-size: 18px;
+
+    animation: slowFloat 4s ease-in-out infinite;
+}
+
+
+.heart-two {
+    top: 75px;
+
+    right: 30px;
+
+    font-size: 12px;
+
+    animation: slowFloat 5s ease-in-out infinite 0.5s;
+}
+
+
+.heart-three {
+    bottom: 45px;
+
+    left: 22px;
+
+    font-size: 14px;
+
+    animation: slowFloat 4.5s ease-in-out infinite 1s;
+}
+
+
+.heart-four {
+    bottom: 25px;
+
+    right: 40px;
+
+    font-size: 20px;
+
+    animation: slowFloat 5s ease-in-out infinite 1.5s;
+}
+
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answers {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+}
+
+
+.answers.show {
+    animation: reveal 0.8s ease forwards;
+}
+
+
+.answer {
+    width: 205px;
+
+    margin-top: 0;
+
+    padding: 9px 18px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-color: #e3b5c1;
+}
+
+
+.answer:hover {
+    background: #c9637d;
+
+    box-shadow:
+        0 8px 20px rgba(201, 99, 125, 0.18);
+}
+
+
+/* =========================
+   READ BUTTONS
+========================= */
+
+#questionButton,
+#loveButton,
+#backButton {
+    opacity: 0;
+
+    transform: translateY(10px);
+}
+
+
+#questionButton.show,
+#loveButton.show,
+#backButton.show {
+    animation: reveal 0.8s ease forwards;
+}
+
+
+/* =========================
+   FINAL LOVE PAGE
+========================= */
+
+.big-love {
+    color: #c9637d;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+}
+
+
+.big-love.show {
     animation: reveal 1s ease forwards;
 }
 
 
-.hidden {
-    display: none;
+.love-sticker {
+    display: block;
+
+    width: 150px;
+
+    max-width: 65%;
+
+    height: auto;
+
+    margin: 20px auto 0;
+
+    opacity: 0;
+
+    transform: scale(0.9);
 }
 
 
-/* Floating hearts */
+.love-sticker.show {
+    animation: stickerReveal 0.8s ease forwards;
+}
 
-.floating-heart {
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+.floating-emoji {
     position: fixed;
 
-    bottom: -30px;
-
-    color: #cf7189;
+    bottom: -40px;
 
     pointer-events: none;
 
     z-index: 100;
 
-    animation: floatUp 3s ease-out forwards;
+    animation: emojiFloat 7s ease-out forwards;
 }
 
 
-/* Animations */
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes reveal {
 
     from {
         opacity: 0;
+
         transform: translateY(10px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 }
@@ -225,25 +629,71 @@ button:hover {
 }
 
 
-@keyframes floatUp {
+@keyframes heartFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-5px) scale(1.05);
+    }
+}
+
+
+@keyframes slowFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+}
+
+
+@keyframes emojiFloat {
 
     0% {
         transform: translateY(0) rotate(0deg);
+
         opacity: 0;
     }
 
     15% {
-        opacity: 0.8;
+        opacity: 1;
     }
 
     100% {
-        transform: translateY(-110vh) rotate(180deg);
+        transform: translateY(-100vh) rotate(180deg);
+
         opacity: 0;
     }
 }
 
 
-/* Mobile */
+@keyframes stickerReveal {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 500px) {
 
@@ -253,12 +703,47 @@ button:hover {
         padding: 35px 25px;
     }
 
+
     h1 {
         font-size: 55px;
     }
 
+
     .message {
         font-size: 20px;
+    }
+
+
+    .question-page {
+        min-height: 320px;
+
+        padding-left: 5px;
+
+        padding-right: 5px;
+    }
+
+
+    .romantic-heart {
+        width: 65px;
+
+        height: 65px;
+
+        font-size: 34px;
+    }
+
+
+    .question {
+        font-size: 20px;
+    }
+
+
+    .big-love {
+        font-size: 24px;
+    }
+
+
+    .love-sticker {
+        width: 130px;
     }
 
 }

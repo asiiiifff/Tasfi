@@ -2,42 +2,62 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>For Tasfia ♡</title>
-      <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A1%3C/text%3E%3C/svg%3E">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A1%3C/text%3E%3C/svg%3E">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&family=Playfair+Display:ital,wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
     <main>
 
-        <div class="heart">♡</div>
+        <!-- FIRST PAGE -->
 
-        <p class="intro">A little something for</p>
+        <section id="firstPage">
 
-        <h1>My TASFIA</h1>
+            <div class="heart">
+                ♡
+            </div>
 
-        <button id="openButton">
-            read this ♡
-        </button>
+            <p class="intro">
+              Something I made for
+            </p>
+
+            <h1>
+            TASFIA♡
+            </h1>
+
+            <button id="openButton">
+                read this ♡
+            </button>
+
+        </section>
 
 
-        <section id="confession" class="hidden">
+        <!-- CONFESSION PAGE -->
+
+        <section id="confessionPage" class="hidden">
 
             <div class="line"></div>
 
             <p class="message">
-                I don't always know how to say these things,
+                I don't know how to say these things,
                 so I thought I'd make you something instead.
             </p>
 
@@ -64,6 +84,90 @@
             <p class="final">
                 I just wanted you to know. ♡
             </p>
+
+            <button id="questionButton" class="hidden">
+                One Question
+            </button>
+
+        </section>
+
+
+        <!-- SECOND / QUESTION PAGE -->
+
+        <section id="questionPage" class="hidden question-page">
+
+            <!-- Decorative background hearts -->
+
+            <span class="decor-heart heart-one">♡</span>
+            <span class="decor-heart heart-two">♡</span>
+            <span class="decor-heart heart-three">♡</span>
+            <span class="decor-heart heart-four">♡</span>
+
+            <!-- Large romantic heart -->
+
+            <div class="romantic-heart">
+                ♡
+            </div>
+
+            <p class="question-small">
+                just one little question...
+            </p>
+
+            <div class="question-line"></div>
+
+            <p class="question">
+                How much do you love me?
+            </p>
+
+            <div class="tiny-hearts">
+                <span>♡</span>
+                <span>♡</span>
+                <span>♡</span>
+                <span>♡</span>
+                <span>♡</span>
+            </div>
+
+            <div class="answers">
+
+                <button class="answer" data-emoji="🥺">
+                    A little ♡
+                </button>
+
+                <button class="answer" data-emoji="☺️">
+                    Quite a lot ♡
+                </button>
+
+                <button class="answer" data-emoji="🥰">
+                    More than I can say ♡
+                </button>
+
+            </div>
+
+            <button id="loveButton" class="hidden">
+                click
+            </button>
+
+        </section>
+
+
+        <!-- FINAL PAGE -->
+
+        <section id="lovePage" class="hidden">
+
+            <div class="line"></div>
+
+            <p class="big-love">
+                I love you Tasfiaaaaaaa ♡
+            </p>
+
+            <img
+                class="love-sticker"
+                src="https://media.tenor.com/f2IyZI3bPEwAAAAi/spams-hun.gif"
+                alt="love sticker">
+
+            <button id="backButton">
+                back to the beginning ♡
+            </button>
 
         </section>
 
